@@ -1,0 +1,21 @@
+1.Compositon du projet [Models,ServicesImplemtation,Services,Controllers]
+
+2.Ajouter des dependances dans le fichier pom.xml
+2.1connexion bd Mysql
+<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+</dependency>
+2.2dependance jpa (midlware entre bd & Back : Sprin ) pour utiliser des fonctionalites prefidis:
+<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>3.0.0</version>
+</dependency>
+
+3.Creation de bd avec Examp MySqL =>Admin
+
+4.Creation Du constructeur , Getter & Setter , Tostring
+
+5.

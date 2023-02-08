@@ -3,6 +3,7 @@ package com.demo.controllers;
 import com.demo.models.User;
 import com.demo.Interfaces.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,5 +34,10 @@ public class userController {
     public String deleteUserById(@PathVariable Long id){
         return userServiceInterface.deleteUser(id);
     }
+    @PutMapping("/update")
+    public User updateUser (@RequestBody User user){
+        return userServiceInterface.updateUser(user);
+    }
+
 
 }

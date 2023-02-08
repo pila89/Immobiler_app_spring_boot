@@ -15,5 +15,7 @@ public interface UserServiceInterface {
 
     public Optional<User> getUser(Long id);
 
+    public  User updateUser(User user);
+
 
 }

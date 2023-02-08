@@ -1,8 +1,7 @@
 package com.demo.controllers;
 
 import com.demo.models.User;
-import com.demo.services.UserServiceInterface;
-import com.demo.servicesimp.UserServiceImp;
+import com.demo.Interfaces.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +28,10 @@ public class userController {
     @GetMapping("/{id}")
     public Optional<User> getUserById(@PathVariable Long id){
         return  userServiceInterface.getUser(id);
+    }
+    @DeleteMapping ("/{id}")
+    public String deleteUserById(@PathVariable Long id){
+        return userServiceInterface.deleteUser(id);
     }
 
 }

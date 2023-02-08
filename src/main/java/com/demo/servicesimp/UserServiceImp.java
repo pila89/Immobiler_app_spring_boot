@@ -2,7 +2,7 @@ package com.demo.servicesimp;
 
 import com.demo.models.User;
 import com.demo.repository.UserRepository;
-import com.demo.services.UserServiceInterface;
+import com.demo.Interfaces.UserServiceInterface;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

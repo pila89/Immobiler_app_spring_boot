@@ -1,4 +1,4 @@
-package com.demo.services;
+package com.demo.Interfaces;
 
 import com.demo.models.User;
 
@@ -14,4 +14,6 @@ public interface UserServiceInterface {
     public String deleteUser(Long id);
 
     public Optional<User> getUser(Long id);
+
+
 }

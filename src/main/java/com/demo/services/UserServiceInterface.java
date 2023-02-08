@@ -3,6 +3,7 @@ package com.demo.services;
 import com.demo.models.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserServiceInterface {
 
@@ -10,5 +11,7 @@ public interface UserServiceInterface {
 
     public User addUser(User user);
 
-    public String deleteUser(String id);
+    public String deleteUser(Long id);
+
+    public Optional<User> getUser(Long id);
 }

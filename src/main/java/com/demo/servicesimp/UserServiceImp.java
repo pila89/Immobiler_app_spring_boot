@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -24,8 +25,13 @@ public class UserServiceImp implements UserServiceInterface {
     }
 
     @Override
-    public String deleteUser(String id) {
+    public String deleteUser(Long id) {
         userRepository.deleteById(id);
         return "succeful delete";
     }
+    @Override
+    public Optional<User> getUser(Long id) {
+        return userRepository.findById(id);
+    }
+
 }

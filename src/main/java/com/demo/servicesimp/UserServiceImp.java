@@ -36,6 +36,11 @@ public class UserServiceImp implements UserServiceInterface {
     }
 
     @Override
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
     public User updateUser(User user) {
         return userRepository.save(user);
     }

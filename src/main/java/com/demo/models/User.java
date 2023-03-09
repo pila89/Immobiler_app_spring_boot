@@ -1,10 +1,12 @@
 package com.demo.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -12,14 +14,21 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private String prenom;
     private Integer age;
+
+    private String email;
+
+    private String password;
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    @ToString.Exclude
+    private List<Annonce> annonces ;
 
 }
 

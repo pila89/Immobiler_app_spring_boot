@@ -15,6 +15,10 @@ public interface UserServiceInterface {
 
     public Optional<User> getUser(Long id);
 
+    public User getUserByEmail(String email);
+
+
+
     public  User updateUser(User user);
 
 
